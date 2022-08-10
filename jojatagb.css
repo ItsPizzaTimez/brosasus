@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 6em;
+}
+
+.imgrotate {
+    animation: rotatejojo 100ms infinite;
+}
+
+.ishrek {
+    visibility: hidden;
+}
+
+.shrek {
+    visibility: visible;
+    width: 20vw;
+    animation: rotateshrek 100ms infinite;
+}
+
+@keyframes rotateshrek {
+    0% {
+        width: 5vw;
+        transform: rotate(0deg);
+    }
+    100% {
+        width: 100vw;
+        transform: rotate(360deg);
+    }
+}
+
+#accueil {
+    position: absolute;
+}
+
+.Aspan {
+    animation: text 700ms infinite;
+}
+
+@keyframes rotatejojo {
+    0% {
+        transform: rotate(0deg);
+        height: 50vh;
+        width: 30vw;
+    }
+    33% {
+        transform: rotate(120deg);
+    }
+    66% {
+        transform: rotate(240deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        height: 30vh;
+        width: 10vw;
+    }
+}
+
+@keyframes text {
+    0% {
+        transform: skewY(0deg);
+    }
+    33% {
+        transform: skewY(120deg);
+    }
+    66% {
+        transform: skewY(240deg);
+    }
+    100% {
+        transform: skewY(360deg);
+    }
+}
+
+@keyframes bcanimation {
+    0% {
+        background-color: red;
+        filter: contrast(15);
+        filter: brightness(20)
+    }
+    100% {
+        background-color: yellow;
+        filter: contrast(15);
+        filter: brightness(20)
+    }
+}
+
+.bodyanimation {
+    animation: bcanimation 256ms infinite;
+}
+
+p {
+    width: 75%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.bodyred {
+    background-color: red;
+    filter: contrast(15);
+    filter: brightness(20)
+}
+
+.bodypyellow {
+    background-color: yellow;
+    filter: contrast(15);
+    filter: brightness(20)
+}
