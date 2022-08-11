@@ -1,4 +1,4 @@
-const a = new Audio('medias/audio/AHRDAA.mp3')
+const a = new Audio('medias/audio/aaa.mp3')
 const b = new Audio('medias/audio/pet2.mp3')
 const pet = new Audio('medias/audio/pet1.mp3')
 const body = document.querySelector("body")
