@@ -9,6 +9,7 @@ body {
     width: 100vw;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 6em;
+    overflow: hidden;
 }
 
 .imgrotate {
@@ -19,6 +20,12 @@ body {
     visibility: hidden;
 }
 
+#floppa {
+    width: 15vw;
+    transform: rotate3d(2, -1, -1, -0.2turn);
+    animation: rotateshrek 100ms infinite;
+}
+
 .shrek {
     visibility: visible;
     width: 20vw;
@@ -27,11 +34,11 @@ body {
 
 @keyframes rotateshrek {
     0% {
-        width: 5vw;
+        width: 10vw;
         transform: rotate(0deg);
     }
     100% {
-        width: 100vw;
+        width: 150vw;
         transform: rotate(360deg);
     }
 }
