@@ -6,7 +6,7 @@ body {
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 6em;
     overflow: hidden;
@@ -20,16 +20,48 @@ body {
     visibility: hidden;
 }
 
+.ifloppa {
+    visibility: visible;
+    animation: rotateshrek 100ms infinite;
+}
+
 #floppa {
     width: 15vw;
     transform: rotate3d(2, -1, -1, -0.2turn);
-    animation: rotateshrek 100ms infinite;
+}
+
+#jojoimg {
+    position: absolute;
+    animation: rotatejojoimg 5s infinite;
 }
 
 .shrek {
     visibility: visible;
     width: 20vw;
     animation: rotateshrek 100ms infinite;
+}
+
+#accueil {
+    position: absolute;
+}
+
+.Aspan {
+    animation: text 700ms infinite;
+}
+
+@keyframes rotatejojoimg {
+    0% {
+        transform: rotate(-500deg);
+    }
+    33% {
+        transform: rotate(-250deg);
+    }
+    66% {
+        transform: rotate(100deg);
+    }
+    100% {
+        transform: rotate(-500deg);
+    }
 }
 
 @keyframes rotateshrek {
@@ -41,14 +73,6 @@ body {
         width: 150vw;
         transform: rotate(360deg);
     }
-}
-
-#accueil {
-    position: absolute;
-}
-
-.Aspan {
-    animation: text 700ms infinite;
 }
 
 @keyframes rotatejojo {
@@ -108,14 +132,20 @@ p {
     transform: translateX(-50%);
 }
 
-.bodyred {
-    background-color: red;
-    filter: contrast(15);
-    filter: brightness(20)
+.bubble {
+    background-image: url("../medias/images/jojo.png");
+    position: absolute;
+    border-radius: 0.3em;
+    opacity: 0.5;
+    animation: anim 8s forwards;
+    filter: hue-rotate(0deg);
 }
 
-.bodypyellow {
-    background-color: yellow;
-    filter: contrast(15);
-    filter: brightness(20)
+@keyframes anim {
+    to {
+        top: -50vh;
+        left: var(--left);
+        opacity: 1;
+        filter: hue-rotate(720deg);
+    }
 }
